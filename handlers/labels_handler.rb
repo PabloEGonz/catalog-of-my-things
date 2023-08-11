@@ -1,4 +1,5 @@
 require_relative '../input'
+require_relative '../label'
 
 class LabelsHandler
   def initialize

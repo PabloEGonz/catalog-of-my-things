@@ -1,13 +1,15 @@
 require_relative '../input'
+require_relative '../game'
+
 class GamesHandler
   def initialize
     @input = Input.new
   end
 
   def add
-    multiplayer = @input.getter('Please enter the multiplayer: ')
-    last_played_at = @input.getter('Please enter the date of the last played: ')
-    publish_date = @input.getter('published date (yyyy-mm-dd): ')
+    multiplayer = @input.getter('Is it multiplayer: ')
+    last_played_at = @input.getter('Enter the last played date: ')
+    publish_date = @input.getter('Enter the published date [YYYY-MM-DD]: ')
     Game.new(Date.new(publish_date.to_i), multiplayer, Date.new(last_played_at.to_i))
   end
 

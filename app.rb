@@ -4,6 +4,7 @@ require_relative 'handlers/games_handler'
 require_relative 'handlers/genres_handler'
 require_relative 'handlers/labels_handler'
 require_relative 'handlers/authors_handler'
+require_relative 'storage'
 require_relative 'input'
 
 class App
@@ -38,7 +39,7 @@ class App
   end
 
   def options
-    puts "\nPlease choose an option by entering a number:"
+    puts "\nPlease choose an option by entering the number:"
     puts "1 - List all books \n2 - List all music albums"
     puts "3 - List of games \n4 - List all genres \n5 - List all labels"
     puts "6 - List all authors \n7 - Add a book"

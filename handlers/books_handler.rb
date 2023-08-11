@@ -1,13 +1,15 @@
 require_relative '../input'
+require_relative '../book'
+
 class BookHandler
   def initialize
     @input = Input.new
   end
 
   def add
-    publisher = @input.getter('Please enter the publisher: ')
-    cover_state = @input.getter('Describe the cover state of the book: ')
-    publish_date = @input.getter('published date (yyyy-mm-dd): ')
+    publisher = @input.getter("Enter the publisher's name: ")
+    cover_state = @input.getter("What is the book's cover state (good/bad): ")
+    publish_date = @input.getter('Published date [YYYY-MM-DD]: ')
     Book.new(Date.new(publish_date.to_i), publisher, cover_state)
   end
 

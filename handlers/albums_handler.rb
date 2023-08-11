@@ -1,12 +1,14 @@
 require_relative '../input'
+require_relative '../music_album'
+
 class AlbumsHandler
   def initialize
     @input = Input.new
   end
 
   def add
-    publish_date = @input.getter('enter the published date (yyyy-mm-dd): ')
-    on_spotify = @input.getter('Is it available on Spotify? [N/Y]')
+    publish_date = @input.getter('Enter the published date [YYYY-MM-DD]: ')
+    on_spotify = @input.getter('Is it available on Spotify? [n/y]')
     MusicAlbum.new(publish_date, on_spotify)
   end
 

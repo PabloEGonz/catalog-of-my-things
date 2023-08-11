@@ -1,4 +1,5 @@
 require_relative '../input'
+require_relative '../author'
 
 class AuthorsHandler
   def initialize
@@ -13,7 +14,7 @@ class AuthorsHandler
 
   def list(authors)
     if authors.empty?
-      puts 'There are not authors created yet'
+      puts 'There are no authors created yet'
     else
       authors.each_with_index do |author, i|
         puts "- #{i + 1}) Name: #{author.first_name} #{author.last_name}"

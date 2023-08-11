@@ -1,14 +1,5 @@
-require_relative 'game'
-require_relative 'author'
 require_relative 'app'
-require_relative 'item'
-require_relative 'music_album'
-require_relative 'genre'
-require_relative 'book'
-require_relative 'label'
-require_relative 'storage'
 require 'date'
-require 'json'
 
 puts 'Welcome to Catalog of my things!'
 

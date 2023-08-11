@@ -1,4 +1,5 @@
 require_relative '../input'
+require_relative '../genre'
 
 class GenresHandler
   def initialize
