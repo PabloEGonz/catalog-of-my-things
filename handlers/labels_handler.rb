@@ -21,4 +21,15 @@ class LabelsHandler
       end
     end
   end
+
+  def save_data(labels)
+    array = labels.map do |ele|
+      {
+        id: ele.id,
+        title: ele.title,
+        color: ele.color
+      }
+    end
+    File.write('labels.json', JSON.pretty_generate(array))
+  end
 end

@@ -20,4 +20,14 @@ class GenresHandler
       end
     end
   end
+
+  def save_data(genres)
+    array = genres.map do |ele|
+      {
+        id: ele.id,
+        name: ele.name
+      }
+    end
+    File.write('genres.json', JSON.pretty_generate(array))
+  end
 end

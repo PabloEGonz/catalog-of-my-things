@@ -18,7 +18,7 @@ class App
     @music_albums = []
     @authors = []
     @labels = []
-    @book_handler = BookHandler.new
+    @books_handler = BooksHandler.new
     @albums_handler = AlbumsHandler.new
     @games_handler = GamesHandler.new
     @input = Input.new
@@ -51,7 +51,7 @@ class App
   end
 
   def list_all_books
-    @book_handler.list(@books)
+    @books_handler.list(@books)
   end
 
   def list_all_music_albums
@@ -75,7 +75,7 @@ class App
   end
 
   def add_item_book
-    book = @book_handler.add
+    book = @books_handler.add
     @books << book
     add_properties(book)
     puts 'Book created succesfully'
@@ -102,20 +102,20 @@ class App
 
     puts "\nSelect a genre from the list (by number)"
     list_all_genres
-    puts "#{g + 1}) Create a new genre"
+    puts "- #{g + 1}) Create a new genre"
     i = gets.chomp.to_i
-    if i < g 
-      @genres[ i - 1].add_item(item)
+    if i <= g
+      @genres[i - 1].add_item(item)
     else
-    genre = @genres_handler.add
-    genre.add_item(item)
-    @genres << genre
+      genre = @genres_handler.add
+      genre.add_item(item)
+      @genres << genre
     end
     puts "\nSelect a label from the list (by number)"
     list_all_labels
-    puts "#{l + 1}) Create a new label"
+    puts "- #{l + 1}) Create a new label"
     j = gets.chomp.to_i
-    if i < l 
+    if j <= l
       @labels[j - 1].add_item(item)
     else
       label = @labels_handler.add
@@ -124,14 +124,23 @@ class App
     end
     puts "\nSelect a author from the list (by number)"
     list_all_authors
-    puts "#{a + 1}) Create a new author"
+    puts "- #{a + 1}) Create a new author"
     k = gets.chomp.to_i
-    if i < k 
+    if k <= a
       @authors[k - 1].add_item(item)
-    else 
+    else
       author = @authors_handler.add
       author.add_item(item)
       @authors << author
     end
+  end
+
+  def save
+    @games_handler.save_data(@games)
+    @books_handler.save_data(@books)
+    @albums_handler.save_data(@music_albums)
+    @labels_handler.save_data(@labels)
+    @authors_handler.save_data(@authors)
+    @genres_handler.save_data(@genres)
   end
 end

@@ -21,4 +21,15 @@ class AuthorsHandler
       end
     end
   end
+
+  def save_data(authors)
+    array = authors.map do |ele|
+      {
+        id: ele.id,
+        first_name: ele.first_name,
+        last_name: ele.last_name
+      }
+    end
+    File.write('authors.json', JSON.pretty_generate(array))
+  end
 end

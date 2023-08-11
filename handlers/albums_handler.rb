@@ -21,4 +21,24 @@ class AlbumsHandler
       end
     end
   end
+
+  def save_data(albums)
+    array = albums.map do |ele|
+      {
+        id: ele.id,
+        publish_date: ele.publish_date,
+        archived: ele.archived,
+        genre_id: ele.genre.id,
+        genre_name: ele.genre.name,
+        author_id: ele.author.id,
+        author_first_name: ele.author.first_name,
+        author_last_name: ele.author.last_name,
+        label_id: ele.label.id,
+        label_title: ele.label.title,
+        label_color: ele.label.color,
+        on_spotify: ele.on_spotify
+      }
+    end
+    File.write('music_albums.json', JSON.pretty_generate(array))
+  end
 end

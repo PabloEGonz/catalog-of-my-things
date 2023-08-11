@@ -8,12 +8,7 @@ def read_files(app)
 end
 
 def write_files
-  @app.storage.save_games(@app.games)
-  @app.storage.save_books(@app.books)
-  @app.storage.save_music_albums(@app.music_albums)
-  @app.storage.save_labels(@app.labels)
-  @app.storage.save_authors(@app.authors)
-  @app.storage.save_genres(@app.genres)
+  @app.save
 end
 
 def main
