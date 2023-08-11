@@ -1,0 +1,17 @@
+[
+  {
+    "id": 646,
+    "publish_date": "2023-01-01",
+    "archived": false,
+    "genre_id": 555,
+    "genre_name": "Comedy",
+    "author_id": 65,
+    "author_first_name": "Maya",
+    "author_last_name": "Smith",
+    "label_id": 155,
+    "label_title": "Great",
+    "label_color": "yellow",
+    "publisher": "New world",
+    "cover_state": "bad"
+  }
+]

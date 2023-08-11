@@ -1,0 +1,17 @@
+[
+  {
+    "id": 872,
+    "publish_date": "0000-01-01",
+    "archived": false,
+    "genre_id": 465,
+    "genre_name": "Sci-Fi",
+    "author_id": 65,
+    "author_first_name": "Maya",
+    "author_last_name": "Smith",
+    "label_id": 155,
+    "label_title": "Great",
+    "label_color": "yellow",
+    "multiplayer": "y",
+    "last_played_at": "2023-01-01"
+  }
+]

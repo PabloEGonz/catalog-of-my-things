@@ -1,0 +1,16 @@
+[
+  {
+    "id": 609,
+    "publish_date": "2020-01-01",
+    "archived": false,
+    "genre_id": 555,
+    "genre_name": "Comedy",
+    "author_id": 775,
+    "author_first_name": "John",
+    "author_last_name": "Smith",
+    "label_id": 15,
+    "label_title": "Free",
+    "label_color": "blue",
+    "on_spotify": "n"
+  }
+]
