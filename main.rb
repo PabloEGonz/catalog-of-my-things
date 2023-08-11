@@ -1,13 +1,13 @@
-require './game'
-require './author'
+require_relative 'game'
+require_relative 'author'
 require_relative 'app'
-require './item'
-require './music_album'
-require './genre'
+require_relative 'item'
+require_relative 'music_album'
+require_relative 'genre'
+require_relative 'book'
+require_relative 'label'
+require_relative 'storage'
 require 'date'
-require './book'
-require './label'
-require './storage'
 require 'json'
 
 puts 'Welcome to Catalog of my things!'
@@ -42,7 +42,7 @@ def main
       main
     end
   else
-    puts ['Error, choose one of the options', '']
+    puts "Error, choose one of the options\n"
     main
   end
 end
